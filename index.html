@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiteBliss</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #f8f4ec;
+        background-position: center;
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+       width: 1600px;
+
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 20px;
+        background-color: white;
+        height: 100px;
+        border-radius: 20px;
+        margin: 0px;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .main {
+        padding: 120px;
+      }
+
+      .list > li {
+        display: inline-block;
+        padding-left: 20px;
+        font-weight: bold;
+      }
+      .list > li > a {
+        text-decoration: none;
+        color: #402b3a;
+        font-size: 20px;
+      }
+      .list > li > a:hover {
+        color: #d63484;
+        transition: 0.5s;
+      }
+      .list > li:hover {
+        transform: translate(2px, -2px);
+      }
+      * {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 20px;
+        background-color: #d63484;
+        color: #f8f4ec;
+      }
+      button:hover {
+        background-color: #402b3a;
+        transition: 0.3s;
+        transform: translate(1px, -2px);
+      }
+      .logo {
+        border-radius: 20px;
+      }
+      .logo:hover {
+        transform: translate(2px, -2px);
+        transition: 0.5s;
+        box-shadow: 1px 1px 9px #d63484;
+      }
+
+      .slogen {
+        width: 500px;
+      }
+      .slogen > h1 {
+        line-height: 55px;
+        font-size: 55px;
+      }
+      .slogen > h2 {
+        font-size: 30px;
+      }
+      .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .main > .slogen {
+        position: relative;
+        left: 200px;
+      }
+      .main > .img {
+        position: relative;
+        right: 200px;
+        top: 50px;
+      }
+      .slogen > button {
+        padding: 15px 25px;
+      }
+      * {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+      }
+      body {
+        background-color: #f8f4ec;
+        margin: 0px;
+        padding: 0;
+      }
+      .about > span {
+        color: #d63484;
+        font-size: 50px;
+      }
+
+      .about {
+        font-size: 40px;
+        margin: 50px;
+        margin-left: 200px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        margin-bottom: 20px;
+      }
+      .img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-left: 300px;
+      }
+      .para {
+        width: 400px;
+        height: 500px;
+        margin-top: 50px;
+        overflow: scroll;
+        line-height: 30px;
+        text-align: left;
+        position: relative;
+        right: 90px;
+      }
+      .para > h1 > span {
+        color: #d63484;
+      }
+      .para > h1 {
+        font-size: 50px;
+        line-height: 40px;
+      }
+      .bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .bottom > .bot {
+        width: 300px;
+        height: 200px;
+      }
+      .bottom > .bot > h1 {
+        text-align: center;
+        color: #d63484;
+        font-size: 40px;
+      }
+      .bottom > .bot > h3 {
+        text-align: center;
+      }
+      /* menu */
+      .about > span {
+        color: #d63484;
+        font-size: 50px;
+      }
+      .about1 > span {
+        color: #d63484;
+        font-size: 40px;
+      }
+
+      .about {
+        font-size: 40px;
+        margin-top: 50px;
+        margin-left: 200px;
+      }
+      .about1 {
+        font-size: 20px;
+        margin: 0px;
+        margin-left: 200px;
+      }
+      .menucont {
+        width: 900px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 50px;
+        margin-left: 350px;
+        margin-right: 40px;
+        margin-top: 50px;
+      }
+      .menucont > .menuc {
+        background-color: #ffc0d9;
+        border-radius: 10px;
+        width: 300px;
+        height: 350px;
+        box-shadow: 10px 10px 5px lightblue;
+      }
+      .menucont > .menuc > img {
+        position: relative;
+        left: 20px;
+        top: 20px;
+        border-radius: 50%;
+      }
+      .menuc > h2 {
+        font-size: 25px;
+        position: relative;
+        left: 20px;
+        top: 15px;
+      }
+      .menuc > h5 {
+        position: relative;
+        left: 20px;
+        text-align: left;
+        width: 250px;
+        height: 50px;
+      }
+      .menuc > h3 {
+        font-size: 30px;
+        position: relative;
+        left: 20px;
+        top: 10px;
+        color: #d63484;
+      }
+      .menuc:hover {
+        transform: scale(1.3);
+        transition: 0.3s;
+      }
+      /*team*/
+      .teams {
+        margin-top: 430px;
+      }
+
+      .ot > span {
+        color: #d63484;
+      }
+      .chefcont {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 180px;
+        margin-right: 180px;
+        margin-top: 130px;
+        
+      }
+      .chefcont > .cc {
+        width: 300px;
+        height: 400px;
+        
+        background-color: #ffc0d9;
+        border-radius: 20px;
+      }
+      .chefcont > .cc:hover{
+        box-shadow: 2px 2px 10px black;
+      }
+      center {
+        margin-top: 60px;
+      }
+      .cc > img {
+        border-radius: 50%;
+        position: relative;
+        left: 40px;
+        top: 30px;
+        backdrop-filter: blur(10px);
+      }
+      .cc > h2 {
+        text-align: center;
+        position: relative;
+        top: 20px;
+      }
+      .media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        right: 20px;
+        top: 20px;
+      }
+      .media > img {
+        margin-left: 30px;
+      }
+      .cc > h5 {
+        text-align: center;
+        opacity: 0.5;
+      }
+      .media > img:hover {
+        transform: scale(0.5);
+        transition: 0.5s;
+      }
+      .cc > img:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+        border-radius: 10px;
+        z-index: 2;
+      }
+      .cc:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+      /*footer*/
+      .foot {
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        position: relative;
+        top: 100px;
+        border-radius: 20px;
+      }
+      .foot > .ff {
+        width: 200px;
+        height: 350px;
+      }
+      .footcont {
+        position: relative;
+        left: 100px;
+        width: 1500px;
+        top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .footcont > .ff {
+        width: 200px;
+        height: 300px;
+      }
+      .address {
+        display: flex;
+        flex-direction: column;
+      }
+      .imggg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .imggg > img:hover {
+        transform: scale(0.3);
+        transition: 1s;
+      }
+      .company > h1 > span {
+        color: #d63484;
+      }
+      .footcont > .follow {
+        position: relative;
+        top: 30px;
+      }
+      
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Englebert&family=Farsan&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Play:wght@400;700&family=Poppins&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar">
+        <a href="./index.html">
+          <img
+            src="./Images/BB (1).jpg"
+            alt=""
+            width="120px"
+            height="100px"
+            class="logo"
+          />
+        </a>
+        <ul class="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#aboutpage">About us</a></li>
+          <li><a href="#menupage">Menu</a></li>
+          <li><a href="#teamda">Team</a></li>
+          <li><a href="./contact.html" target="_blank">Contact</a></li>
+        </ul>
+        <a href="./order.html" target="_blank"
+          ><button><span class="order">Order Now</span></button></a
+        >
+      </nav>
+    </div>
+    <div class="main">
+      <div class="slogen">
+        <h2>Welcome to <span style="color: #d63484">B</span>B,</h2>
+        <h1>"Indulge in Every Scoop, Taste the Joy of Ice Cream!"</h1>
+        <br />
+        <a href="#aboutpage"><button>About us</button></a>
+      </div>
+      <div class="img">
+        <img
+          src="./Images/transparent-ice-cream-delicious-ci1.png"
+          alt=""
+          width="350px"
+          height="600px"
+        />
+      </div>
+    </div>
+
+    <!--about us -->
+    <br />
+    <br />
+    <h1 id="aboutpage" class="about"><span>A</span>bout us</h1>
+    <div class="container">
+      <div class="img">
+        <img src="./Images/about.png" alt="" width="600px" height="600px" />
+      </div>
+
+      <div class="para">
+        <h1><span>BITE</span>BLISS Icecream's</h1>
+        <p>
+          Welcome to Bite Bliss, where every scoop is a journey into pure
+          delight! Founded in 2019, Bite Bliss has quickly become a cherished
+          destination for ice cream lovers around the globe. Step into our
+          virtual parlour and prepare to be enchanted by a world of creamy
+          indulgence. From timeless classics to daring innovations, our
+          extensive menu boasts an array of flavors to suit every craving and
+          occasion. Whether you're craving the comforting familiarity of velvety
+          vanilla or yearning for the exotic allure of mango chili lime, we have
+          something to tantalize every taste bud. But Bite Bliss is more than
+          just a purveyor of frozen treats; it's a celebration of life's sweet
+          moments. Our commitment to quality extends beyond ingredients, as each
+          batch is handcrafted with care to ensure a texture that is as smooth
+          as it is indulgent. Join us in our pursuit of happiness, one scoop at
+          a time. Explore our tantalizing flavors, discover new favorites, and
+          treat yourself to a taste of bliss with Bite Bliss – where every bite
+          is an invitation to savor the joy of life. What sets Bite Bliss apart
+          is not just the quality of our ingredients or the perfection of our
+          recipes, but the passion infused into every scoop. Each batch is
+          churned with care, ensuring a smooth, velvety texture that melts
+          seamlessly on the tongue, leaving behind a lingering sense of
+          satisfaction. But Bite Bliss is more than just a purveyor of ice
+          cream; it's a symbol of joy, bringing people together to savor life's
+          sweet moments. Whether it's a scoop shared with loved ones on a sunny
+          afternoon or a pint savored in solitude after a long day, Bite Bliss
+          is there to elevate ordinary moments into extraordinary memories. With
+          a commitment to excellence and a dedication to spreading happiness,
+          Bite Bliss continues to redefine the ice cream experience, one
+          delicious bite at a time."
+        </p>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="bot year">
+        <h1>5 years</h1>
+
+        <h3>Excellence in production</h3>
+      </div>
+      <div class="bot branch">
+        <h1>10+</h1>
+
+        <h3>Branches across India</h3>
+      </div>
+      <div class="bot customer">
+        <h1>1,00,000+</h1>
+
+        <h3>Happy Customers</h3>
+      </div>
+      <div class="bot workers">
+        <h1>500+</h1>
+
+        <h3>Dedicated Workers</h3>
+      </div>
+    </div>
+
+    <!--menu-->
+    <h1 id="menupage" class="about"><span>O</span>ur Menu</h1>
+    <h3 class="about1">"Let's Unlock Your <span>Sweet</span> Escape."</h3>
+    <div class="menucont">
+      <div class="menuc cont1">
+        <img
+          src="./Images/c1.jpg"
+          alt=""
+          width="150px"
+          height="150px"
+          class="menuimh"
+        />
+        <h2>Japanese Mochi</h2>
+        <h5>
+          It is a most enjoyable Japanese treat called Mochi “ice cream
+          sandwich.” It has a chewy texture that easily melt-in-your-mouth ice
+          cream filling.
+        </h5>
+        <h3>$18</h3>
+      </div>
+      <div class="menuc cont2">
+        <img
+          src="./Images/c2.jpg"
+          alt=""
+          width="150px"
+          height="150px"
+          class="menuimh"
+        />
+        <h2>Dondurma</h2>
+        <h5>
+          It is a Turkish frozen dessert, which you could enjoy using a fork and
+          knife at your dining. It is made up of a secret ingredient called
+          Mastic(edible organic glue)
+        </h5>
+        <h3>$45</h3>
+      </div>
+      <div class="menuc cont3">
+        <img
+          src="./Images/c3.jpg"
+          alt=""
+          width="150px"
+          height="150px"
+          class="menuimh"
+        />
+        <h2>Italian Icy</h2>
+        <h5>
+          It is an eggless and dairyless Italian ice-cream. Italian ice is a
+          combination of water, sugar, and flavors.
+        </h5>
+        <h3>$32</h3>
+      </div>
+      <div class="menuc cont4">
+        <img
+          src="./Images/c4.jpg"
+          alt=""
+          width="150px"
+          height="150px"
+          class="menuimh"
+        />
+        <h2>Philadelphia</h2>
+        <h5>
+          Philly ice cream is made with a mixture of churning milk, cream,
+          sugar, and flavorings. So, it looks very appealing and is also healthy
+          to eat.
+        </h5>
+        <h3>$25</h3>
+      </div>
+      <div class="menuc cont5">
+        <img
+          src="./Images/c5.jpg"
+          alt=""
+          width="150px"
+          height="150px"
+          class="menuimh"
+        />
+        <h2>Sorbet</h2>
+        <h5>
+          It is also a famous Arabic frozen deserts, which does not contain any
+          dairy products. And, has only two ingredients—fruit puree and sugar.
+        </h5>
+        <h3>$18</h3>
+      </div>
+      <div class="menuc cont6">
+        <img
+          src="./Images/c6.jpg"
+          alt=""
+          width="150px"
+          height="150px"
+          class="menuimh"
+        />
+        <h2>Gelato Ice-Cream</h2>
+        <h5>
+          It is a famous frozen Italian dessert and comes in different
+          varieties. It is more healthy to eat, as it consists of low fat and is
+          rich in milk and ingredients.
+        </h5>
+        <h3>$45</h3>
+      </div>
+    </div>
+    <!--team-->
+
+    <div class="teams">
+      <center>
+        <h2 id="teamda" class="tea">Team</h2>
+        <h1 class="ot">Our Experience <span>Maker's</span></h1>
+      </center>
+      <div class="chefcont">
+        <div class="cc chef1">
+          <img src="./Images/chef1.jpg" alt="" width="210px" height="200px" />
+          <h2>Victoia</h2>
+          <h5>Chief maker</h5>
+          <div class="media">
+            <img src="./Images/instagram.png" alt="" />
+            <img src="./Images/whatsapp.png" alt="" />
+            <img src="./Images/facebook.png" alt="" />
+          </div>
+        </div>
+        <div class="cc chef2">
+          <img src="./Images/chef2.jpg" alt="" width="210px" height="200px" />
+          <h2>Emilly Jones</h2>
+          <h5>Executive maker</h5>
+          <div class="media">
+            <img src="./Images/instagram.png" alt="" />
+            <img src="./Images/whatsapp.png" alt="" />
+            <img src="./Images/facebook.png" alt="" />
+          </div>
+        </div>
+        <div class="cc chef3">
+          <img src="./Images/chef3.jpg" alt="" width="210px" height="200px" />
+          <h2>Kennady</h2>
+          <h5>Supportive maker</h5>
+          <div class="media">
+            <img src="./Images/instagram.png" alt="" />
+            <img src="./Images/whatsapp.png" alt="" />
+            <img src="./Images/facebook.png" alt="" />
+          </div>
+        </div>
+        <div class="cc chef4">
+          <img src="./Images/chef4.jpg" alt="" width="210px" height="200px" />
+          <h2>Scarlett</h2>
+          <h5>Supportive maker</h5>
+          <div class="media">
+            <img src="./Images/instagram.png" alt="" />
+            <img src="./Images/whatsapp.png" alt="" />
+            <img src="./Images/facebook.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <footer class="foot">
+      <div class="footcont">
+        <div class="ff company">
+          <h1>BITE<span>BLISS</span> Company</h1>
+          <p>
+            "BiteBliss" is a heavenly haven for ice cream lovers, offering a
+            delectable array of handcrafted flavors that evoke pure joy with
+            every bite. From indulgent classics to innovative creations, each
+            scoop is a blissful journey through creamy delight and unforgettable
+            taste sensations.
+          </p>
+        </div>
+        <div class="ff quicklinks">
+          <h1>Quick Links</h1>
+          <ul
+            class="last"
+            style="list-style: none; line-height: 30px; font-size: 20px"
+          >
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#aboutpage">About us</a></li>
+            <li><a href="#menupage">Menu</a></li>
+            <li><a href="#teamda">Team</a></li>
+            <li><a href="./contact.html" target="_blank">Contact</a></li>
+          </ul>
+        </div>
+        <div class="ff address">
+          <h1>Address</h1>
+          <ul style="list-style: none; line-height: 20px; font-size: 20px">
+            <li>123 Maple Street Springfield, Anytown 54321 United States</li>
+            -----------------------
+            <li>999-103-3342</li>
+            -----------------------
+            <li>www.Bitebliss.com</li>
+            -----------------------
+            <li>bitebliss2019@gmail.com</li>
+          </ul>
+        </div>
+        <div class="ff follow">
+          <h1>Follow us on</h1>
+          <div class="imggg">
+            <img src="./Images/instagram.png" alt="" />
+            <img src="./Images/whatsapp.png" alt="" />
+            <img src="./Images/facebook.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <center>
+        <p>Ⓒ2019 BiteBliss Company, all rights reserved</p>
+      </center>
+    </footer>
+  </body>
+</html>
